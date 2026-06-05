@@ -10,7 +10,7 @@ function Products() {
     const filtereditems = isActive === 'All' ? ProductList : ProductList.filter(items => items.category === isActive)
     const rendercard = filtereditems.slice(0, 8).map(product => {
         return (
-            <ProductCard image={product.image} name={product.name} price={product.price} />
+            <ProductCard key={product.id} image={product.image} name={product.name} price={product.price} />
         )
     }
     )

@@ -14,7 +14,7 @@ function Category() {
             <div className='items-center bg-zinc-100 rounded-2xl pt-16 p-5'>
                 <h3 className='mx-auto w-fit font-semibold  text-lg md:text-2xl text-zinc-700'>{card.title}</h3>
                 <p className='text-zinc-400 mt-1 mb-9 text-sm md:text-md'>{card.description}</p>
-                <Button name="See More"/> 
+                <a href='/fruits'><Button name="See More"/></a>
             </div>
         </div>
         )

@@ -2,10 +2,23 @@ import { useState } from 'react'
 
 import './App.css'
 import Home from './components/Home/Home'
+import {createBrowserRouter, Route} from 'react-router-dom'
+import Fruits from './components/Fruits/Fruits'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const router=createBrowserRouter([
+    {
+      path:'/',
+      element:<Home />,
+      children :
+      {},
+
+      path:'/fruits',
+      element:<Fruits/>
+    }
+  ])
 
   return (
     <>
