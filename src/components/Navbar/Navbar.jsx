@@ -115,19 +115,50 @@ function Navbar() {
 
                     </div>
                     {/* mobile nav */}
-                    <ul className={`max-w-full rounded-2xl flex flex-col md:hidden p-10 absolute top-20 -left-full -translate-x-1/2 transition-all duration-300 ${showmenu ? "left-1/2" : ""} bg-amber-300/10 backdrop-blur-xl gap-y-10 items-center`}>
+                    <ul
+                        className={`max-w-full rounded-2xl flex flex-col md:hidden p-10 absolute top-20 -left-full -translate-x-1/2 transition-all duration-300 ${showmenu ? "left-1/2" : ""
+                            } bg-amber-300/10 backdrop-blur-xl gap-y-10 items-center`}
+                    >
                         <li>
-                            <a href='#' className='px-2  font-semibold tracking-wider text-zinc-800 hover:text-amber-500'>Home</a>
+                            <NavLink
+                                to="/"
+                                className="px-2 font-semibold tracking-wider text-zinc-800 hover:text-amber-500"
+                                onClick={togglemenu}
+                            >
+                                Home
+                            </NavLink>
                         </li>
+
                         <li>
-                            <a href='#' className='px-2  font-semibold tracking-wider text-zinc-800 hover:text-amber-500' >About Us</a>
+                            <NavLink
+                                to="/about"
+                                className="px-2 font-semibold tracking-wider text-zinc-800 hover:text-amber-500"
+                                onClick={togglemenu}
+                            >
+                                About Us
+                            </NavLink>
                         </li>
+
                         <li>
-                            <a href='#' className='px-2 font-semibold tracking-wider text-zinc-800 hover:text-amber-500'>Process</a>
+                            <NavLink
+                                to="/process"
+                                className="px-2 font-semibold tracking-wider text-zinc-800 hover:text-amber-500"
+                                onClick={togglemenu}
+                            >
+                                Process
+                            </NavLink>
                         </li>
+
                         <li>
-                            <a href='#' className='px-2  font-semibold tracking-wider text-zinc-800 hover:text-amber-500'>Contact Us</a>
+                            <NavLink
+                                to="/contact"
+                                className="px-2 font-semibold tracking-wider text-zinc-800 hover:text-amber-500"
+                                onClick={togglemenu}
+                            >
+                                Contact Us
+                            </NavLink>
                         </li>
+
                         {/* Search Bar */}
                         <li className="flex items-center overflow-hidden rounded-full bg-amber-50 shadow-md border border-amber-300 md:hidden">
                             <input

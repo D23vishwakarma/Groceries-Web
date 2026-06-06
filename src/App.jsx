@@ -9,6 +9,8 @@ import Meat from './components/Meat/Meat'
 import Processes from './components/Processes/Processes'
 import Layout from './components/Layout/Layout'
 import AllProducts from './components/Allproducts/AllProducts'
+import About from './components/About/About'
+import ContactUs from './components/ContactUs/ContactUs'
 
 
 function App() {
@@ -41,6 +43,14 @@ function App() {
         {
           path:'/allproducts',
           element:<AllProducts/>
+        },
+        {
+          path:'/about',
+          element:<About/>
+        },
+        {
+          path:'/contact',
+          element:<ContactUs/>
         }
       ]
     }
