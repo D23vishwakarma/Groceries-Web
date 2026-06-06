@@ -4,35 +4,75 @@ import { HiShoppingBag } from "react-icons/hi2";
 import { FaSearch } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
 import { RiMenuFold2Fill } from "react-icons/ri";
+import { Link, NavLink } from 'react-router-dom';
 function Navbar() {
-    const [showmenu,setShowmenu]=useState(false);
-    const togglemenu=()=>{
+    const [showmenu, setShowmenu] = useState(false);
+    const togglemenu = () => {
         setShowmenu(!showmenu);
     }
-    const [isscrolled,setIsscrolled]=useState(false);
-    useEffect(()=>{
-        const handlescroll=()=>{
-        setIsscrolled(window.scrollY>10)
+    const [isscrolled, setIsscrolled] = useState(false);
+    useEffect(() => {
+        const handlescroll = () => {
+            setIsscrolled(window.scrollY > 10)
         }
-        window.addEventListener('scroll',handlescroll);
-    },[])
+        window.addEventListener('scroll', handlescroll);
+    }, [])
     return (
         <>
-            <header className={`fixed top-0 right-0 left-0 z-1 ${isscrolled? 'bg-white/90 backdrop-blur-md drop-shadow-lg': ''}`}>
+            <header className={`fixed top-0 right-0 left-0 z-50 ${isscrolled ? 'bg-white/90 backdrop-blur-md drop-shadow-lg' : ''}`}>
                 <nav className=' flex justify-between items-center py-4 pt-5 md:pt-5 max-w-[1400px] mx-auto px-8 md:px-10'>
-                    <div className=' text-3xl md:text-3xl font-bold'><a href='#'>Daily<span className='text-amber-500'>B</span>ascket</a></div>
-                    <ul className='hidden md:flex'>
+                    <div className="text-3xl md:text-3xl font-bold">
+                        <Link to="/">
+                            Daily<span className="text-amber-500">B</span>asket
+                        </Link>
+                    </div>
+                    <ul className="hidden md:flex">
                         <li>
-                            <a href='#' className='px-3 font-semibold tracking-wider text-zinc-800 hover:text-amber-500'>Home</a>
+                            <NavLink
+                                to="/"
+                                className={({ isActive }) =>
+                                    `px-3 font-semibold tracking-wider ${isActive ? "text-amber-500" : "text-zinc-800 hover:text-amber-500"
+                                    }`
+                                }
+                            >
+                                Home
+                            </NavLink>
                         </li>
+
                         <li>
-                            <a href='#' className='px-3 font-semibold tracking-wider text-zinc-800 hover:text-amber-500' >About Us</a>
+                            <NavLink
+                                to="/about"
+                                className={({ isActive }) =>
+                                    `px-3 font-semibold tracking-wider ${isActive ? "text-amber-500" : "text-zinc-800 hover:text-amber-500"
+                                    }`
+                                }
+                            >
+                                About Us
+                            </NavLink>
                         </li>
+
                         <li>
-                            <a href='#' className='px-3 font-semibold tracking-wider text-zinc-800 hover:text-amber-500'>Process</a>
+                            <NavLink
+                                to="/process"
+                                className={({ isActive }) =>
+                                    `px-3 font-semibold tracking-wider ${isActive ? "text-amber-500" : "text-zinc-800 hover:text-amber-500"
+                                    }`
+                                }
+                            >
+                                Process
+                            </NavLink>
                         </li>
+
                         <li>
-                            <a href='#' className='px-3 font-semibold tracking-wider text-zinc-800 hover:text-amber-500'>Contact Us</a>
+                            <NavLink
+                                to="/contact"
+                                className={({ isActive }) =>
+                                    `px-3 font-semibold tracking-wider ${isActive ? "text-amber-500" : "text-zinc-800 hover:text-amber-500"
+                                    }`
+                                }
+                            >
+                                Contact Us
+                            </NavLink>
                         </li>
                     </ul>
                     <div className="flex items-center gap-3">
@@ -66,16 +106,16 @@ function Navbar() {
                             <HiShoppingBag className="text-xl" />
                         </a>
                         {/* hampburger */}
-                        <a
+                        <button
                             href="#" onClick={togglemenu}
                             className="p-1 md:p-2 rounded-full bg-white shadow text-zinc-800 hover:text-amber-500 hover:scale-110 transition-all md:hidden"
                         >
-                            {showmenu? <RiMenuFold2Fill />:<FiMenu className="text-xl" />}
-                        </a>
+                            {showmenu ? <RiMenuFold2Fill /> : <FiMenu className="text-xl" />}
+                        </button>
 
                     </div>
                     {/* mobile nav */}
-                    <ul className={`max-w-full rounded-2xl flex flex-col md:hidden p-10 absolute top-20 -left-full -translate-x-1/2 transition-all duration-300 ${showmenu? "left-1/2": ""} bg-amber-300/10 backdrop-blur-xl gap-y-10 items-center`}>
+                    <ul className={`max-w-full rounded-2xl flex flex-col md:hidden p-10 absolute top-20 -left-full -translate-x-1/2 transition-all duration-300 ${showmenu ? "left-1/2" : ""} bg-amber-300/10 backdrop-blur-xl gap-y-10 items-center`}>
                         <li>
                             <a href='#' className='px-2  font-semibold tracking-wider text-zinc-800 hover:text-amber-500'>Home</a>
                         </li>

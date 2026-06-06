@@ -3,6 +3,7 @@ import Heading from '../Heading/Heading'
 import ProductList from '../ProductList/ProductList';
 import ProductCard from '../ProductCard/ProductCard';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 function Products() {
     const categories = ['All', 'Fruits', 'Vegetables', 'Dairy', 'Seafood']
@@ -42,7 +43,12 @@ function Products() {
                     {rendercard}
                 </div>
                 <div className='mt-9 flex justify-center'>
-                    <Button name="View All" />
+                    <Link
+                        to='/allproducts'
+                        className="px-5 py-2 md:px-7 md:py-3 bg-gradient-to-r from-orange-500 to-amber-300 text-white font-semibold rounded-full shadow-lg hover:from-orange-600 hover:to-amber-400 hover:scale-105 transition-all duration-300"
+                    >
+                        View All
+                    </Link>
                 </div>
             </div>
         </section>
