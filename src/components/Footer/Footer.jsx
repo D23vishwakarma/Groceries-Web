@@ -44,7 +44,7 @@ function Footer() {
               <input
                 type="email"
                 placeholder="Email address"
-                className="flex-1 px-3 py-2.5 text-sm text-gray-600 outline-none bg-transparent placeholder-gray-400"
+                className="flex-1 px-2 py-2.5 text-sm text-gray-600 outline-none bg-transparent placeholder-gray-400"
               />
               <button className="bg-amber-500 hover:bg-amber-600 transition-colors px-3 py-3 flex items-center justify-center">
                 <IoSend size={16} color="white" />
