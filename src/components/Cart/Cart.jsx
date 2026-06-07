@@ -24,7 +24,7 @@ function Cart() {
             
             {/* Image + Name */}
             <div className='flex items-center gap-4'>
-              <img src={item.image} alt={item.name} className='w-16 h-16 object-contain shrink-0' />
+              <img src={item.image} loading='lazy' alt={item.name} className='w-16 h-16 object-contain shrink-0' />
               <h3 className='font-semibold text-base md:text-lg'>{item.name}</h3>
             </div>
 

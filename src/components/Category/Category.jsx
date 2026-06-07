@@ -10,7 +10,7 @@ function Category() {
         return (
             <div key={card.id} className='flex-1 p-4 '>
                 <div className='w-full min-h-[20vh] md:min-h-[30vh] relative -mb-10'>
-                    <img src={card.image} className='absolute bottom-0'></img>
+                    <img loading='lazy' src={card.image} className='absolute bottom-0'></img>
                 </div>
                 <div className='items-center bg-zinc-100 rounded-2xl pt-16 p-5'>
                     <h3 className='mx-auto w-fit font-semibold  text-lg md:text-2xl text-zinc-700'>{card.title}</h3>

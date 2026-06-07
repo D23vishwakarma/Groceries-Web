@@ -32,6 +32,7 @@ function ProductCard({ image, name, price }) {
       <img
         src={image}
         alt={name}
+        loading='lazy'
         className="w-28 h-28 md:w-36 md:h-36 object-contain mt-16"
       />
 
