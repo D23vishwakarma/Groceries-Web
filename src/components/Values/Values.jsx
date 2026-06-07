@@ -38,7 +38,7 @@ function Values() {
     return (
         <>
             <section>
-                <div className='p-4 pt-30 md:pt-20 max-w-[1400px] mx-auto px-8 md:px-10'>
+                <div className='p-4 pt-16 md:pt-20 max-w-[1400px] mx-auto px-8 md:px-10'>
                     <Heading highlight="Our" content="Values" />
 
                     <div className='flex flex-col md:flex-row mt-10 md:mt-20 gap-5'>

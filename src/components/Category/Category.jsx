@@ -9,7 +9,7 @@ function Category() {
     const rendercard = category.map(card => {
         return (
             <div key={card.id} className='flex-1 p-4 '>
-                <div className='w-full min-h-[30vh] relative -mb-10'>
+                <div className='w-full min-h-[20vh] md:min-h-[30vh] relative -mb-10'>
                     <img src={card.image} className='absolute bottom-0'></img>
                 </div>
                 <div className='items-center bg-zinc-100 rounded-2xl pt-16 p-5'>
@@ -30,7 +30,7 @@ function Category() {
             <div className=' p-4 pt-30 md:pt-20 max-w-[1400px] mx-auto px-8 md:px-10'>
                 <Heading highlight="Shop" content="by Category" />
                 {/* Cards */}
-                <div className='flex md:flex-row flex-col gap-x-15 -mt-9 md:mt-10 text-center items-center'>{rendercard}</div>
+                <div className='flex md:flex-row flex-col md:gap-x-15 md:mt-10 text-center items-center'>{rendercard}</div>
             </div>
         </section>
     )
