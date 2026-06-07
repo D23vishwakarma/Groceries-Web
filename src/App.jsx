@@ -11,6 +11,8 @@ import Layout from './components/Layout/Layout'
 import AllProducts from './components/Allproducts/AllProducts'
 import About from './components/About/About'
 import ContactUs from './components/ContactUs/ContactUs'
+import {CartProvider} from './Context/CartContext'
+import Cart from './components/Cart/Cart'
 
 
 function App() {
@@ -51,15 +53,19 @@ function App() {
         {
           path:'/contact',
           element:<ContactUs/>
+        },
+        {
+          path:'/cart',
+          element:<Cart/>
         }
       ]
     }
   ])
 
   return (
-    <>
+    <CartProvider>
       <RouterProvider router={router}></RouterProvider>
-    </>
+    </CartProvider>
   )
 }
 

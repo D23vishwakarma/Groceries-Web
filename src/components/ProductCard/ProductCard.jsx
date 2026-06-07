@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaHeart } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
 import Button from '../Button/Button';
+import { CartContext } from '../../Context/CartContext'
 
 function ProductCard({ image, name, price }) {
+  
+  const {dispatch}=useContext(CartContext);
+
+  const handleAddToCart=()=>{
+    dispatch({
+      type: 'ADD_ITEM',
+      payload :{image,name,price}
+    })
+  }
   return (
     <div className="bg-zinc-100 rounded-lg p-4 w-full max-w-[270px] h-[390px] flex flex-col items-center relative shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
 
@@ -13,7 +23,8 @@ function ProductCard({ image, name, price }) {
       </button>
 
       {/* Add Icon */}
-      <button className="absolute top-5 right-5 bg-orange-500 text-white p-2.5 rounded-md text-xl hover:bg-orange-600 transition-all duration-300">
+      <button onClick={handleAddToCart}
+      className="absolute top-5 right-5 bg-orange-500 text-white p-2.5 rounded-md text-xl hover:bg-orange-600 transition-all duration-300">
         <FaPlus />
       </button>
 

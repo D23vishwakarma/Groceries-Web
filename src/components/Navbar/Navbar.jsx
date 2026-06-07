@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { GoHeartFill } from "react-icons/go";
 import { HiShoppingBag } from "react-icons/hi2";
 import { FaSearch } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
 import { RiMenuFold2Fill } from "react-icons/ri";
 import { Link, NavLink } from 'react-router-dom';
+import { CartContext } from '../../Context/CartContext'
 function Navbar() {
+    const { cart } = useContext(CartContext);
     const [showmenu, setShowmenu] = useState(false);
     const togglemenu = () => {
         setShowmenu(!showmenu);
@@ -99,12 +101,14 @@ function Navbar() {
                         </a>
 
                         {/* Cart */}
-                        <a
-                            href="#"
-                            className="p-1 md:p-2 rounded-full bg-white shadow text-zinc-700 hover:text-green-600 hover:scale-110 transition-all"
-                        >
+                        <Link to='/cart' className="relative p-1 md:p-2 rounded-full bg-white shadow text-zinc-700 hover:text-green-600 hover:scale-110 transition-all">
                             <HiShoppingBag className="text-xl" />
-                        </a>
+                            {cart.length > 0 && (
+                                <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">
+                                    {cart.length}
+                                </span>
+                            )}
+                        </Link>
                         {/* hampburger */}
                         <button
                             href="#" onClick={togglemenu}
