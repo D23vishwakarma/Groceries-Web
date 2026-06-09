@@ -1,16 +1,115 @@
-# React + Vite
+# 🛒 DailyBasket — Grocery E-Commerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive grocery shopping web app built with **React**, **Vite**, and **Tailwind CSS**. Features a complete cart system, persistent storage, and a clean modern UI.
 
-Currently, two official plugins are available:
+🔗 **Live Demo**: [groceries-web-topaz.vercel.app](https://groceries-web-topaz.vercel.app)
+📁 **Repository**: [github.com/D23vishwakarma/Groceries-Web](https://github.com/D23vishwakarma/Groceries-Web)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🏠 **Home Page** — Hero section, featured categories, and product highlights
+- 🛍️ **Product Browsing** — Browse grocery items across multiple categories
+- 🛒 **Cart System** — Add, remove, and update item quantities in real time
+- 💾 **Persistent Cart** — Cart data saved in `localStorage` across sessions
+- 📦 **State Management** — Global cart state using React Context API + `useReducer`
+- 📄 **About / Process / Contact Pages** — Fully built-out informational sections
+- ⚡ **Performance Optimized** — Lazy loading, WebP image format, code splitting
+- 📱 **Fully Responsive** — Works seamlessly on mobile, tablet, and desktop
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React 18 | UI library |
+| Vite | Build tool & dev server |
+| Tailwind CSS | Utility-first styling |
+| React Context API | Global state management |
+| useReducer | Cart state logic |
+| localStorage | Cart persistence |
+| Vercel | Deployment |
+
+---
+
+## 📂 Project Structure
+
+```
+Groceries-Web/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── context/         # Cart Context & Reducer
+│   ├── pages/           # Page components (Home, About, Contact, etc.)
+│   ├── assets/          # Images & icons
+│   └── App.jsx          # Root component with routing
+├── index.html
+├── vite.config.js
+└── package.json
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js v18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/D23vishwakarma/Groceries-Web.git
+
+# Navigate to the project directory
+cd Groceries-Web
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 🌐 Deployment
+
+This project is deployed on **Vercel**. Any push to the `main` branch triggers an automatic production deployment.
+
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel)](https://groceries-web-topaz.vercel.app)
+
+---
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to open a [GitHub Issue](https://github.com/D23vishwakarma/Groceries-Web/issues) or submit a pull request.
+
+---
+
+## 👨‍💻 Author
+
+**Divyansh Vishwakarma**
+B.Tech CSE @ MMMUT Gorakhpur (2023–2027)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/divyansh-vishwakarma)
+[![GitHub](https://img.shields.io/badge/GitHub-D23vishwakarma-black?style=flat&logo=github)](https://github.com/D23vishwakarma)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
