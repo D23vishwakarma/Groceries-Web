@@ -108,8 +108,3 @@ B.Tech CSE @ MMMUT Gorakhpur (2023–2027)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/divyansh-vishwakarma-89861a298)
 [![GitHub](https://img.shields.io/badge/GitHub-D23vishwakarma-black?style=flat&logo=github)](https://github.com/D23vishwakarma)
 
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
