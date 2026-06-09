@@ -105,7 +105,7 @@ Contributions, issues, and feature requests are welcome! Feel free to open a [Gi
 **Divyansh Vishwakarma**
 B.Tech CSE @ MMMUT Gorakhpur (2023–2027)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/divyansh-vishwakarma)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/divyansh-vishwakarma-89861a298)
 [![GitHub](https://img.shields.io/badge/GitHub-D23vishwakarma-black?style=flat&logo=github)](https://github.com/D23vishwakarma)
 
 ---
